@@ -7,6 +7,7 @@ let choixMemory = "legumes";
 
 function init(){
     afficherUser();
+    afficherMemory();
     document.getElementById("choixMemory").addEventListener("change", chargerImageMemory);
     document.getElementById("enregistrerOption").addEventListener("click", ajouterPreferenceUtilisateur);
 
@@ -28,14 +29,21 @@ function afficherUser() {
     document.getElementById("emailProfil").value = email;
 }
 
-function chargerImageMemory(event) {    
-    choixMemory = event.target.value;
+function afficherMemory() {  
+    choixMemory = document.getElementById("choixMemory").value  
     const src = images.find(v => v.dossier === choixMemory).detail;
     const img = document.createElement("img");
     img.setAttribute("src", src);
     document.getElementById("visualisationMemoryChoisi").appendChild(img);
 
     tailleMemory();
+}
+
+function chargerImageMemory() {
+//supprimer image du memory
+    document.getElementById("visualisationMemoryChoisi").innerHTML = "";
+    document.getElementById("tailleMemory").innerHTML = "";
+    afficherMemory();
 }
 
 function tailleMemory() {
@@ -56,10 +64,8 @@ function tailleMemory() {
 function ajouterPreferenceUtilisateur() {
     const tailleMemory = document.getElementById("tailleMemory").value;
     //todo : ajouter la taille du memory et le memory au Json getUser()
-
-    const profilConnecte = getProfils().find(e => e.nom === nom);
-    window.localStorage.removeItem(profilConnecte);
-
-    const updatedProfils = [...getProfils(), getUser()];
+    const updatedUser = {...getUser(), choixMemory, tailleMemory};
+    
+    const updatedProfils = [...getProfils().filter(p => p.nom !== nom), updatedUser];
     window.localStorage.setItem("profils", JSON.stringify(updatedProfils));
 }
