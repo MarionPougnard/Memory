@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="memory.css" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"> 
+        <title>S"inscrire</title>
+        
+    </head>
+    <body>
+        <nav>
+            <a class="memory-nav" Index.html" rel="noopener noreferrer">Accueil</a>
+            <a class="memory-nav" href="inscription.html" rel="noopener noreferrer">S'inscrire</a>
+            <a class="memory-nav" href="connection.js" rel="noopener noreferrer">Se connecter</a>
+            <a class="memory-nav" href="Profil.html" rel="noopener noreferrer">Profil</a>
+            <a class="memory-nav" href="Jouer.html" rel="noopener noreferrer">Jouer</a>
+        </nav>
+        <h1>S'inscrire</h1>
+
+        <form>
+            <fieldset>
+                <div class="memory-conteneur">
+                    <label>Nom d'utilisateur</label>
+                    <div class="memory-input-conteneur">
+                        <input id="nomUtilisateur" class="champ" type="text" placeholder="3 caractères minimum" minlength="6" required autofocus>
+                        <img id="nomUtilisateurImg">
+                    </div>
+                    <div id="nomUtilisateurInfo"></div>
+                </div>
+                <div class="memory-conteneur">
+                    <label>Entrez votre email</label>
+                    <div class="memory-input-conteneur">
+                        <input id="email" class="champ" type="email" placeholder="Votre email" required>
+                        <img id="emailImg">
+                    </div>
+                    <div id="emailInfo"></div>
+                </div>
+                <div class="memory-conteneur">
+                    <label>Mot de passe</label>
+                    <div class="memory-input-conteneur">
+                        <input id="mdp" class="champ" type="password" pattern="^(?=.*[0-9])(?=.*\W)(?!.* ).{6,}$" placeholder="votre mot de passe" required>
+                        <img id="mdpImg">
+                    </div>
+                    <div id="mdpInfo">Au moins un symbole, un chiffre, ainsi que 6 caractères minimum</div>
+                    <div id="forceMdp">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+                <div class="memory-conteneur">
+                    <label>Confirmez le mot de passe</label>
+                    <div class="memory-input-conteneur">
+                        <input id="confirmationMdp" class="champ" type="password" pattern="^(?=.*[0-9])(?=.*\W)(?!.* ).{6,}$" placeholder="Confirmez le mot de passe" required>
+                        <img id="confirmationMdpImg">
+                    </div>
+                    
+                </div>
+                       
+            </fieldset>
+
+            <div class="memory-centrer-boutons">
+                <input class="memory-bouttons" type="button" id="creationCompte" value="Création du compte" disabled>
+                <input class="memory-bouttons" type="reset" id="reset" value="Annuler">
+            </div>
+        </form>
+        
+        <script src="inscription.js" type="module"></script>
+    </body>
+</html>

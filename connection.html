@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="memory.css" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"> 
+        <title>Se connecter</title>
+        
+    </head>
+    <body>
+        <nav>
+            <a class="memory-nav" href="Index.html" rel="noopener noreferrer">Accueil</a>
+            <a class="memory-nav" href="S'inscrire.html" rel="noopener noreferrer">S'inscrire</a>
+            <a class="memory-nav" href="connection.html" rel="noopener noreferrer">Se connecter</a>
+            <a class="memory-nav" href="Profil.html" rel="noopener noreferrer">Profil</a>
+            <a class="memory-nav" href="Jouer.html" rel="noopener noreferrer">Jouer</a>
+        </nav>
+
+        <h1>Connectez-vous</h1>
+
+        <form>
+            <fieldset>
+                <div class="memory-conteneur">
+                    <label>Entrez votre email</label>
+                    <input id="emailConnection" class="champ" type="email" placeholder="Votre email" required>
+                </div>
+                <div class="memory-conteneur">
+                    <label>Mot de passe</label>
+                    <input id="mdpConnection" class="champ" type="password" pattern="^(?=.*[0-9])(?=.*\W)(?!.* ).{6,}$" placeholder="votre mot de passe" required>
+                </div>                     
+            </fieldset>
+
+            <div class="memory-centrer-boutons">
+                <input class="memory-bouttons" type="button" id="seConnecter" value="Se connecter">
+                <input class="memory-bouttons" type="reset" id="resetConnection" value="Annuler">
+            </div>
+        </form>
+        
+        <script src="connection.js" type="module"></script>
+    </body>
+</html>

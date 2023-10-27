@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="memory.css" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"> 
+        <title>Profil</title>
+        
+    </head>
+    <body>
+        <nav>
+            <a class="memory-nav" href="Index.html" rel="noopener noreferrer">Accueil</a>
+            <a class="memory-nav" href="inscription.html" rel="noopener noreferrer">S'inscrire</a>
+            <a class="memory-nav" href="Se_connecter.html" rel="noopener noreferrer">Se connecter</a>
+            <a class="memory-nav" href="Profil.html" rel="noopener noreferrer">Profil</a>
+            <a class="memory-nav" href="Jouer.html" rel="noopener noreferrer">Jouer</a>
+        </nav>
+
+        <h1>Profil</h1>
+
+        <form>
+            <img class="projet_profil_photo" src="images/question.svg" alt="photo de l'utilisateur">
+            <fieldset>
+                <div class="memory-conteneur">
+                    <label>Nom d'utilisateur</label>
+                    <div class="memory-input-conteneur">
+                        <input id="nomUtilisateurProfil" class="champ" type="text" required autofocus>
+                    </div>
+                </div>
+                <div class="memory-conteneur">
+                    <label>Email</label>
+                    <div class="memory-input-conteneur">
+                        <input id="emailProfil" class="champ" type="email" required>
+                    </div>
+                </div>                                    
+            </fieldset>
+
+            <div>
+                <label for="choixMemory">Choix du Memory</label>
+                <select name="choix" id="choixMemory">
+                    <option value="legumes">Légumes</option>
+                    <option value="animauxAnimes">Animaux animés</option>
+                    <option value="animauxDomestiques">Animaux domestiques</option>
+                    <option value="dinosaures">Dinosaures</option>
+                    <option value="dinosauresAvecNom">Dinosaures avec nom</option>
+                    <option value="chiens">Chiens</option>
+                    <option value="animaux">Animaux</option>
+                    <option value="alphabetScrabble">Alphabet-Scrabble</option>
+                </select>
+                <div id="visualisationMemoryChoisi"></div>
+            </div>
+
+            <div>
+                <label for="tailleMemory">Taille du Memory</label>
+                <select name="taille" id="tailleMemory">
+                    <option value="8">4 * 2</option>
+                    <option value="12">4 * 3</option>
+                    <option value="16">4 * 4</option>
+                    <option value="20">4 * 5</option>
+                    <option value="24">4 * 6</option>
+                    <option value="28">4 * 7</option>
+                </select>
+            </div>
+
+            <div class="memory-centrer-boutons">
+                <input class="memory-bouttons" type="button" id="enregistrerOption" value="Enregistrez Option">
+            </div>
+        </form>
+        
+
+        <script src="profil.js" type="module"></script>
+    </body>
+</html>

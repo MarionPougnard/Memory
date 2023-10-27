@@ -1,0 +1,195 @@
+body {
+    background: linear-gradient(to top right, #ACD0C0, #D9B44A);
+    background-size: content;
+    background-repeat: no-repeat;
+    /*max-width: 768px;*/
+    /*max-height: max-content;*/
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    font-family: 'Roboto', sans-serif;
+    padding:0;
+}
+nav {
+    box-sizing: border-box;
+    margin: 0;
+    max-width: max-content;
+    display: flex;
+    flex-direction: row;
+    background-color: #4F6457;
+    border-bottom: 1px solid white;
+    top: 0;
+    padding: 1.5rem;
+}
+
+.memory-nav {
+    color : white;
+    text-decoration: none;
+    padding-right: 1rem;
+}
+
+.memory-nav:hover {
+    font-weight: bold;
+    background-color: #4f6457ce;
+}
+
+h1 {
+    color: #4F6457;
+    text-align: center;
+}
+
+fieldset {
+    border-radius: 5px;
+    padding: 3rem;
+}
+.memory-input-conteneur {
+    border-bottom: 1px solid white;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    height: 1.5rem;
+    gap: 1% 1%;
+}
+
+fieldset input {
+    width: 100%;
+    color: grey;
+    background-color: transparent;
+    border: none;
+    flex-grow: 90%;
+}
+
+fieldset img {
+    flex-grow: 10%;
+    height: 1.2rem;
+    padding-bottom: 1%;
+}
+
+.memory-conteneur {
+    padding: 0.75rem 0;
+
+}
+
+#forceMdp {
+    height: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0.5rem 0 2rem 0;
+    
+}
+
+#forceMdp span {
+    width: 100%;
+    height: 50%;
+    background: transparent;
+    position: relative;
+    margin: 0px 10px;
+}
+
+#forceMdp span::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+}
+
+#forceMdp span:nth-child(1).active::before {
+    background: tomato;
+}
+#forceMdp span:nth-child(2).active::before {
+    background: yellow;
+}
+#forceMdp span:nth-child(3).active::before {
+    background: #2fd32f;
+}
+
+#forceMdp span::after{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    bottom: -10px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+#forceMdp span:nth-child(1).active::after {
+    content: "faible";
+}
+#forceMdp span:nth-child(2).active::after {
+    content: "moyen";
+}
+#forceMdp span:nth-child(3).active::after {
+    content: "fort";
+}
+
+.memory-centrer-boutons {
+    display: flex;
+    justify-content: space-around;
+    padding: 1 rem;
+}
+
+.memory-bouttons {
+    background-color: #4F6457;
+    color: white;
+    font-weight: bold;
+    border-radius: 10px;
+    padding: 0.6rem;
+    box-sizing: border-box;
+    box-sizing: border-box;
+    transition: all 0.3s;
+    margin-top: 2rem;
+}
+
+.memory-bouttons[disabled] {
+    cursor: not-allowed;
+    background-color: #4f6457ce;
+}
+
+.memory-bouttons:hover {
+    cursor: pointer;
+    box-shadow: #4f6457ce 0px 7px 29px 0px;
+}
+
+.memory-bouttons[disabled]:hover {
+    cursor: not-allowed;
+    box-shadow: none;
+    background-color: #4f6457ce;
+}
+
+#memory {
+    padding: 1%;
+    box-sizing: border-box;
+    max-width: 50%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2px 1%;
+}
+
+#memory img {
+    width: 24%;
+}
+
+#nomUtilisateur {
+    background-image: "images/error.svg";
+}
+
+#nomUtilisateurInfo, #emailInfo {
+    color: red;
+}
+
+/* Profil */
+.projet_profil_photo {
+    background-color: white;
+    border-radius: 50%;
+    max-height: 8rem;
+    /* centrer*/
+    
+}
