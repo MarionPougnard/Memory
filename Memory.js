@@ -79,16 +79,14 @@ function dessinerJeu(choixMemory, tailleMemory) {
 function cacherJeu(){
     const images = document.querySelectorAll("img");
     images.forEach(image => {
-        setTimeout(() =>  {
         image.src = "images/question.svg";
-        }, 1000);
     })
 }
 
 function voirImage(event) {
     if (!bloquerClick) {
+        // todo : flip de l'image
         const image = event.target;
-        //const id = image.getAttribute("id");
         const dataId = image.getAttribute("data-id");
         const choixMemory = image.getAttribute("name");
         const dossier = images.find(v => v.dossier === choixMemory);//trouver choixMemory dans images.js
