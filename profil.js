@@ -10,7 +10,6 @@ function init(){
     afficherMemory();
     document.getElementById("choixMemory").addEventListener("change", chargerImageMemory);
     document.getElementById("enregistrerOption").addEventListener("click", ajouterPreferenceUtilisateur);
-
 }
 
 function getUser() {
@@ -20,7 +19,6 @@ function getUser() {
 function getProfils() {
     return JSON.parse(window.localStorage.getItem("profils") ?? "[]");
 }
-
 
 function afficherUser() {
     const email = getUser().email;
@@ -40,7 +38,7 @@ function afficherMemory() {
 }
 
 function chargerImageMemory() {
-//supprimer image du memory
+//supprimer image et taille du memory déjà présent
     document.getElementById("visualisationMemoryChoisi").innerHTML = "";
     document.getElementById("tailleMemory").innerHTML = "";
     afficherMemory();

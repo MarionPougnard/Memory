@@ -34,7 +34,6 @@ function verifierMdp(event) {
         alert("Erreur, votre mot de passe doit contenir au moins un symbole, un chiffre, ainsi que 6 caractères minimum");
     } else {
         mdpCheck = true;
-        console.log(mdpCheck);
         activerValidation();
     }
 }
@@ -64,6 +63,6 @@ function verifierLocalStorage() {
     } else {
         alert(`l'email ${email} est connecté`);
         window.localStorage.setItem("user", JSON.stringify(user));
-        window.location.href = "Profil.html";
+        window.location.href = "profil.html";
     }
 }

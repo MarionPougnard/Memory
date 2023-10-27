@@ -4,9 +4,6 @@ let nomUtilisateurCheck = false;
 let emailCheck = false;
 let mdpCheck = false;
 let confirmationMdpCheck = false;
-// localstorage
-
-
 
 function init(){
     document.getElementById("nomUtilisateur").addEventListener("input", verifierNomUtilisateur);
@@ -65,23 +62,25 @@ function verifierMdp(event) {
         mdpCheck = true;
         activerValidation();
     }
-
+    
     // force du mot de passe
     if (longueurMin) {
-        document.querySelector("#forceMdp span:nth-child(1)").classList.add('active')
+        document.querySelector("#forceMdp span:nth-child(1)").classList.add('active');
     } else {
-        document.querySelector("#forceMdp span:nth-child(1)").classList.remove('active')
+        document.querySelector("#forceMdp span:nth-child(1)").classList.remove('active');
     }
     if (longueurMin && (contientChiffre || contientCaractere)) {
-        document.querySelector("#forceMdp span:nth-child(2)").classList.add('active')
+        document.querySelector("#forceMdp span:nth-child(2)").classList.add('active');
     } else {
-        document.querySelector("#forceMdp span:nth-child(2)").classList.remove('active')
+        document.querySelector("#forceMdp span:nth-child(2)").classList.remove('active');
     }
     if (longueurForte && contientChiffre && contientCaractere) {
-        document.querySelector("#forceMdp span:nth-child(3)").classList.add('active')
+        document.querySelector("#forceMdp span:nth-child(3)").classList.add('active');
     } else {
-        document.querySelector("#forceMdp span:nth-child(3)").classList.remove('active')
+        document.querySelector("#forceMdp span:nth-child(3)").classList.remove('active');
     }
+    
+    // todo : vérifier si la confirmation du mot de passe est toujours bonne
 }
 
 function verifierConfirmationMdp(event) {
