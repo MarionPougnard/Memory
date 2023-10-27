@@ -5,9 +5,23 @@ window.onload = init;
 const choixMemory = "legumes";
 function init(){
     //todo : aller chercher dans le localstorage user
+    afficherUser();
     document.getElementById("choixMemory").addEventListener("change", chargerImageMemory);
 
 
+}
+
+function getUser() {
+    return JSON.parse(window.localStorage.getItem("user") ?? "[]");
+}
+
+function afficherUser() {
+    const nom = getUser().nom;
+    const email = getUser().email;
+    console.log(nom);
+
+    document.getElementById("nomUtilisateurProfil").value = nom;
+    document.getElementById("emailProfil").value = email;
 }
 
 function chargerImageMemory(event) {

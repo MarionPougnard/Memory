@@ -56,15 +56,14 @@ function verifierLocalStorage() {
     const email = document.getElementById("emailConnection").value;
     const mdp = document.getElementById("mdpConnection").value;
     const emailDansLocalStorage = getProfils().some(e => e.email === email);
-    const mdpCorrespondant = getProfils().find(e => e.email === email).mdp;
-    const nomUtilisateurCorrespondant = getProfils().find(e => e.email === email).nom;
-    const userConnecter = [{nomUtilisateurCorrespondant, email}];
+    const user = getProfils().find(e => e.email === email);
+    const mdpCorrespondant = user.mdp;
 
     if (!emailDansLocalStorage || (mdp !== mdpCorrespondant)) {
         alert("Erreur, votre email ou mot de passe n'existe pas")
     } else {
         alert(`l'email ${email} est connecté`);
-        window.localStorage.setItem("user", JSON.stringify(userConnecter));
+        window.localStorage.setItem("user", JSON.stringify(user));
         window.location.href = "Profil.html";
     }
 }
